@@ -28,7 +28,7 @@
                 </div>
                 <div class="testimonial-content">
                     <div class="testimonial-author-img">
-                        <img src="assets/img/testimonial/01.jpg" alt="">
+                        <img src="assets/img/students/a-1.jpg" alt="">
                     </div>
                     <div class="testimonial-author-info">
                         <h4>Kayombo Ilunga David</h4>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="testimonial-content">
                     <div class="testimonial-author-img">
-                        <img src="assets/img/testimonial/02.jpg" alt="">
+                        <img src="assets/img/students/a-2.jpg" alt="">
                     </div>
                     <div class="testimonial-author-info">
                         <h4>Ndomba Kalonji Fabrice</h4>
@@ -76,7 +76,7 @@
                 </div>
                 <div class="testimonial-content">
                     <div class="testimonial-author-img">
-                        <img src="assets/img/testimonial/03.jpg" alt="">
+                        <img src="assets/img/students/a-3.jpg" alt="">
                     </div>
                     <div class="testimonial-author-info">
                         <h4>Fatu Mushid Fatu</h4>
@@ -100,7 +100,7 @@
                 </div>
                 <div class="testimonial-content">
                     <div class="testimonial-author-img">
-                        <img src="assets/img/testimonial/04.jpg" alt="">
+                        <img src="assets/img/students/a-4.jpg" alt="">
                     </div>
                     <div class="testimonial-author-info">
                         <h4>Polulu Ntoya David</h4>
@@ -124,7 +124,7 @@
                 </div>
                 <div class="testimonial-content">
                     <div class="testimonial-author-img">
-                        <img src="assets/img/testimonial/05.jpg" alt="">
+                        <img src="assets/img/students/a-5.jpg" alt="">
                     </div>
                     <div class="testimonial-author-info">
                         <h4>Baluti Botshula Pauline</h4>

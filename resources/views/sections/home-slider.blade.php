@@ -14,7 +14,7 @@
                             <p data-animation="fadeInLeft" data-delay=".75s">
                                 <strong> Mr. Joël KABASELE</strong> vous propose une offre originale et inédite : parcourir, dans un cadre agréable et une ambiance détendue et conviviale, les règles en matière de TVA
                             </p>
-                            <h4 data-animation="fadeInRight" data-delay="1s" class="text-white"><i class="far fa-calendar-clock me-1"></i>A partir du 04 avril </h4>
+                            <h5 data-animation="fadeInRight" data-delay="1s" class="text-white"><i class="far fa-calendar-clock me-1"></i>A partir du 04 avril | formation continue </h5>
 
                             <div class="hero-btn" data-animation="fadeInUp" data-delay="1s">
                                 <a href="about.html" class="theme-btn theme-btn2">En Savoir plus<i
@@ -41,7 +41,7 @@
                             <p data-animation="fadeInLeft" data-delay=".75s">
                                 Formez-vous à l'installation de la vidéosurveillance, du contrôle d'accès et des alarmes intrusion, et acquérez une expertise professionnelle de qualité.
                             </p>
-                            <h4 data-animation="fadeInRight" data-delay="1s" class="text-white"><i class="far fa-calendar-clock me-1"></i>A partir du 02 Juin </h4>
+                            <h5 data-animation="fadeInRight" data-delay="1s" class="text-white"><i class="far fa-calendar-clock me-1"></i>À partir du 2 juin | Formation continue</h5>
                             <div class="hero-btn" data-animation="fadeInUp" data-delay="1s">
                                 <a href="about.html" class="theme-btn theme-btn2">En Savoir plus<i
                                         class="fas fa-arrow-right-long"></i></a>
@@ -68,7 +68,7 @@
                                 L’intelligence artificielle ouvre de nouvelles perspectives dans le monde professionnel : explorons ensemble les opportunités qu’elle offre.
                             </p>
 
-                            <h4 data-animation="fadeInRight" data-delay="1s" class="text-white"><i class="far fa-calendar-clock me-1"></i>A partir du 05 mai </h4>
+                            <h5 data-animation="fadeInRight" data-delay="1s" class="text-white"><i class="far fa-calendar-clock me-1"></i>A partir du 05 mai | Formation continue</h5>
 
                             <div class="hero-btn" data-animation="fadeInUp" data-delay="1s">
                                 <a href="about.html" class="theme-btn theme-btn2">En Savoir plus<i

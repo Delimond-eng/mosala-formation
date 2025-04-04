@@ -18,15 +18,15 @@
                 <div class="col-md-6 col-lg-4">
                     <x-course-item
                         category="Finance"
-                        image="assets/img/course/06.jpg"
-                        link="course-single.html"
+                        image="assets/img/students/8.avif"
+                        link="#"
                         lessons="10"
                         rating="4"
-                        title="Accounting And Finance"
-                        description="There are many variations of passages of Lorem Ipsum available..."
-                        seats="75"
-                        duration="04 Years"
-                        price="750"
+                        title="Syscohada informatisé "
+                        description="Maitrisez la comptabilité informatisée"
+                        date="07 avril"
+                        duration="04 Jours"
+                        price="100"
                     />
                 </div>
             @endfor

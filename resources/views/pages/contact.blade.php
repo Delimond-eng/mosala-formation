@@ -5,7 +5,7 @@
     <main class="main">
 
     <!-- breadcrumb -->
-    <div class="site-breadcrumb" style="background: url(assets/img/students/page.jpg)">
+    <div class="site-breadcrumb" style="background: url(assets/img/students/page.avif)">
         <div class="container">
             <h2 class="breadcrumb-title">Nous Contacter</h2>
             <ul class="breadcrumb-menu">

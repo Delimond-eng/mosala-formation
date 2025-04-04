@@ -15,7 +15,7 @@
             <div class="col-md-6 col-lg-3">
                 <div class="team-item wow fadeInUp" data-wow-delay=".25s">
                     <div class="team-img">
-                        <img src="assets/img/team/01.jpg" alt="thumb">
+                        <img src="assets/img/students/t-1.jpg" alt="thumb">
                     </div>
                     <div class="team-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -25,8 +25,8 @@
                     </div>
                     <div class="team-content">
                         <div class="team-bio">
-                            <h5><a href="teacher-single.html">Angela T. Vigil</a></h5>
-                            <span>Associate Professor</span>
+                            <h5><a href="teacher-single.html">Lionnel Nawej</a></h5>
+                            <span>Formateur en CCTV.</span>
                         </div>
                     </div>
                     <span class="team-social-btn"><i class="far fa-share-nodes"></i></span>
@@ -35,7 +35,7 @@
             <div class="col-md-6 col-lg-3">
                 <div class="team-item wow fadeInUp" data-wow-delay=".50s">
                     <div class="team-img">
-                        <img src="assets/img/team/02.jpg" alt="thumb">
+                        <img src="assets/img/students/t-2.jpg" alt="thumb">
                     </div>
                     <div class="team-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -45,8 +45,8 @@
                     </div>
                     <div class="team-content">
                         <div class="team-bio">
-                            <h5><a href="teacher-single.html">Frank A. Mitchell</a></h5>
-                            <span>Associate Professor</span>
+                            <h5><a href="teacher-single.html">Isaac Mabuki</a></h5>
+                            <span>Ir. en réseau</span>
                         </div>
                     </div>
                     <span class="team-social-btn"><i class="far fa-share-nodes"></i></span>
@@ -55,7 +55,7 @@
             <div class="col-md-6 col-lg-3">
                 <div class="team-item wow fadeInUp" data-wow-delay=".75s">
                     <div class="team-img">
-                        <img src="assets/img/team/03.jpg" alt="thumb">
+                        <img src="assets/img/students/t-3.jpg" alt="thumb">
                     </div>
                     <div class="team-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -65,8 +65,8 @@
                     </div>
                     <div class="team-content">
                         <div class="team-bio">
-                            <h5><a href="teacher-single.html">Susan D. Lunsford</a></h5>
-                            <span>CEO & Founder</span>
+                            <h5><a href="teacher-single.html">Gaston Delimond</a></h5>
+                            <span>Analyste Programmeur</span>
                         </div>
                     </div>
                     <span class="team-social-btn"><i class="far fa-share-nodes"></i></span>
@@ -75,7 +75,7 @@
             <div class="col-md-6 col-lg-3">
                 <div class="team-item wow fadeInUp" data-wow-delay="1s">
                     <div class="team-img">
-                        <img src="assets/img/team/04.jpg" alt="thumb">
+                        <img src="assets/img/students/t-4.jpg" alt="thumb">
                     </div>
                     <div class="team-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -85,8 +85,8 @@
                     </div>
                     <div class="team-content">
                         <div class="team-bio">
-                            <h5><a href="teacher-single.html">Dennis A. Pruitt</a></h5>
-                            <span>Associate Professor</span>
+                            <h5><a href="teacher-single.html">Beni Herman</a></h5>
+                            <span>Expert comptable</span>
                         </div>
                     </div>
                     <span class="team-social-btn"><i class="far fa-share-nodes"></i></span>

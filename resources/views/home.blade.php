@@ -28,19 +28,15 @@
         <!-- course-area -->
 
 
-        <!-- video-area -->
-        @include("sections.home-spot")
-        <!-- video-area end -->
-
 
         <!-- choose-area -->
         @include("sections.home-chooseArea")
         <!-- choose-area end -->
 
 
-        <!-- event area -->
-        @include("sections.home-events")
-        <!-- event area end -->
+        <!-- video-area -->
+        @include("sections.home-spot")
+        <!-- video-area end -->
 
 
         <!-- enroll area-->

@@ -4,7 +4,7 @@
     <main class="main">
 
         <!-- breadcrumb -->
-        <div class="site-breadcrumb" style="background: url(assets/img/students/page.jpg)">
+        <div class="site-breadcrumb" style="background: url(assets/img/students/page.avif)">
             <div class="container">
                 <h2 class="breadcrumb-title">Nos Formations</h2>
                 <ul class="breadcrumb-menu">
@@ -26,15 +26,15 @@
                                 <div class="col-md-6 col-12">
                                     <x-course-item
                                         category="Finance"
-                                        image="assets/img/students/8.jpg"
-                                        link="course-single.html"
+                                        image="assets/img/students/8.avif"
+                                        link="#"
                                         lessons="10"
                                         rating="4"
-                                        title="Accounting And Finance"
-                                        description="There are many variations of passages of Lorem Ipsum available..."
-                                        seats="75"
-                                        duration="04 Years"
-                                        price="750"
+                                        title="Syscohada informatisé"
+                                        description="Maitrisez la comptabilité informatisée !"
+                                        date="07 avril"
+                                        duration="04 jours"
+                                        price="100"
                                     />
                                 </div>
                             @endfor

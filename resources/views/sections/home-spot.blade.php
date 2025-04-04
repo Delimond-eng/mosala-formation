@@ -1,4 +1,4 @@
-<div class="video-area pb-80">
+<div class="video-area pb-80 pt-80">
     <div class="container">
         <div class="row g-4">
             <div class="col-lg-4 wow fadeInLeft" data-wow-delay=".25s">
