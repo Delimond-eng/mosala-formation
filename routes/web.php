@@ -9,3 +9,4 @@ Route::get('/', function () {
 Route::view('/more-courses', 'pages.more-courses');
 Route::view('/faqs', 'pages.faq');
 Route::view('/contact-us', 'pages.contact');
+Route::view('/course-details', 'pages.course-single');

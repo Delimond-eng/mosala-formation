@@ -14,7 +14,7 @@
     <div class="course-img">
         <span class="course-tag"><i class="far fa-bookmark"></i> {{ $category }}</span>
         <img src="{{ $image }}" alt="">
-        <a href="{{ $link }}" class="btn"><i class="far fa-link"></i></a>
+        <a href="{{ url("/course-details")}}" class="btn"><i class="far fa-link"></i></a>
     </div>
     <div class="course-content">
         <div class="course-meta">
@@ -27,7 +27,8 @@
             </div>
         </div>
         <h4 class="course-title">
-            <a href="{{ $link }}">{{ $title }}</a>
+        <a href="{{ url("/course-details") }}">{{ $title }}</a>
+        {{--<a href="{{ $link }}">{{ $title }}</a>--}}
         </h4>
         <p class="course-text">{{ $description }}</p>
         <div class="course-bottom">
