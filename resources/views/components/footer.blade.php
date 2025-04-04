@@ -30,11 +30,11 @@
                         <h4 class="footer-widget-title">Liens rapides</h4>
                         <ul class="footer-list">
                             <li><a href="#"><i class="fas fa-caret-right"></i> A propos</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> FAQ's</a></li>
+                            <li><a href="{{url("/faqs")}}"><i class="fas fa-caret-right"></i> FAQ's</a></li>
                             <li><a href="#"><i class="fas fa-caret-right"></i> Temoignages</a></li>
                             <li><a href="#"><i class="fas fa-caret-right"></i> Formations</a></li>
                             <li><a href="#"><i class="fas fa-caret-right"></i> Livres</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Contacts</a></li>
+                            <li><a href="{{url('/contact-us')}}"><i class="fas fa-caret-right"></i> Contacts</a></li>
                         </ul>
                     </div>
                 </div>

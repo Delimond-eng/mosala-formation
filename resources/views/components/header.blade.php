@@ -35,7 +35,7 @@
     <div class="main-navigation">
         <nav class="navbar navbar-expand-lg">
             <div class="container position-relative">
-                <a class="navbar-brand" href="index-2.html">
+                <a class="navbar-brand" href="/">
                     <h1 class="logo"><i class="far fa-graduation-cap" style="color: #1877f2;"></i>mosala</h1>
                 </a>
                 <div class="mobile-menu-right">
@@ -112,7 +112,7 @@
                                                     </li>
                                                     <li><a class="dropdown-item" href="faculty-single.html">Faculty
                                                             Single</a></li>
-                                                    <li><a class="dropdown-item" href="contact.html">Contact With
+                                                    <li><a class="dropdown-item" href="{{url("/contact-us")}}">Contact With
                                                             Us</a></li>
                                                 </ul>
                                             </div>
@@ -128,7 +128,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Evénements</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{url("/contact-us")}}">Contact</a></li>
                     </ul>
                     <div class="nav-right">
                         <div class="search-btn">
