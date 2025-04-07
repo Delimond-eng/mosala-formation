@@ -1,3 +1,4 @@
+
 @props([
     'category' => 'Uncategorized',
     'image' => 'assets/img/default.jpg',
@@ -27,13 +28,13 @@
         <a href="{{ url("/course-details") }}">{{ $title }}</a>
         {{--<a href="{{ $link }}">{{ $title }}</a>--}}
         </h4>
-        <p class="course-text">{{ $description }}</p>
+{{--        <p class="course-text">{{ Str::limit($description, 50) }}</p>--}}
         <div class="course-bottom">
             <div class="course-bottom-left">
                 <span><i class="far fa-calendar-clock"></i>{{ $date }}</span>
                 <span><i class="far fa-clock"></i>{{ $duration }}</span>
             </div>
-            <span class="course-price">${{ number_format($price, 2) }}</span>
+            <span class="course-price">{{ $price }}</span>
         </div>
     </div>
 </div>

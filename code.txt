@@ -1,0 +1,11 @@
+MULTI DOMAIN PROJECT MANAGEMENT
+
+Route::domain(env('ADMIN_DOMAIN'))->group(function () {
+    Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard');
+    // autres routes admin ici...
+});
+
+Route::domain(env('FRONT_DOMAIN'))->group(function () {
+    Route::get('/', [App\Http\Controllers\Front\HomeController::class, 'index'])->name('front.home');
+    // autres routes front ici...
+});

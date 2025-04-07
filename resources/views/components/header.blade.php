@@ -1,3 +1,7 @@
+@php
+    $formationsArr = config('formations')
+@endphp
+
 <header class="header">
     <!-- header top -->
     <div class="header-top">
@@ -22,8 +26,7 @@
                                 <a href="#"><i class="far fa-envelopes"></i> <span>info@mosala.site</span></a>
                             </li>
                             <li>
-                                <a href="tel:+21236547898"><i class="far fa-phone-volume"></i> +(243) 81 245
-                                    2225</a>
+                                <a href="tel:+243 833 002 021"><i class="far fa-phone-volume"></i> +(243) 833 002 021</a>
                             </li>
                         </ul>
                     </div>
@@ -51,7 +54,7 @@
                 <div class="collapse navbar-collapse" id="main_nav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Accueil</a>
+                            <a class="nav-link active" href="/">Accueil</a>
                         </li>
 
                         <li class="nav-item mega-menu dropdown">
@@ -60,7 +63,7 @@
                                 <div class="mega-content">
                                     <div class="container-fluid">
                                         <div class="row">
-                                            <div class="col-12 col-sm-4 col-md-3">
+                                            <div class="col-12 col-sm-4 col-md-4">
                                                 <div class="menu-about">
                                                     <a href="#" class="menu-about-logo">
                                                         <h1 class="logo-light"><i class="far fa-graduation-cap"
@@ -72,50 +75,16 @@
                                                         afin d'accompagner chacun vers la réussite.</p>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-sm-4 col-md-3">
+                                            <div class="col-12 col-sm-4 col-md-4">
                                                 <ul class="mega-menu-item">
-                                                    <li><a class="dropdown-item" href="academic-single.html">Art And
-                                                            Design</a></li>
-                                                    <li><a class="dropdown-item" href="academic-single.html">Acting
-                                                            And Drama</a></li>
-                                                    <li><a class="dropdown-item"
-                                                           href="academic-single.html">Accounting And Finance</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="academic-single.html">Biology
-                                                            And Conservation</a></li>
-                                                    <li><a class="dropdown-item" href="academic-single.html">Science
-                                                            And Engineering</a></li>
+                                                    @foreach($formationsArr as $f)
+                                                    <li><a class="dropdown-item" href="/course-details?slot={{$f['slot']}}">{{$f["title"]}}</a></li>
+                                                    <li>
+                                                    @endforeach
                                                 </ul>
                                             </div>
-                                            <div class="col-12 col-sm-4 col-md-3">
-                                                <ul class="mega-menu-item">
-                                                    <li><a class="dropdown-item"
-                                                           href="academic-single.html">Software Systems</a></li>
-                                                    <li><a class="dropdown-item" href="academic-single.html">Human
-                                                            Resource</a></li>
-                                                    <li><a class="dropdown-item" href="academic-single.html">Health
-                                                            Administration</a></li>
-                                                    <li><a class="dropdown-item"
-                                                           href="academic-single.html">Biochemistry</a></li>
-                                                    <li><a class="dropdown-item"
-                                                           href="academic-single.html">Computer Science</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-12 col-sm-12 col-md-3">
-                                                <ul class="mega-menu-item">
-                                                    <li><a class="dropdown-item" href="academic.html">Academics
-                                                            Department</a></li>
-                                                    <li><a class="dropdown-item"
-                                                           href="academic-single.html">Academic Department
-                                                            Single</a></li>
-                                                    <li><a class="dropdown-item" href="faculty.html">Our Faculty</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="faculty-single.html">Faculty
-                                                            Single</a></li>
-                                                    <li><a class="dropdown-item" href="{{url("/contact-us")}}">Contact With
-                                                            Us</a></li>
-                                                </ul>
-                                            </div>
+
+
                                         </div>
                                     </div>
                                 </div>
@@ -136,7 +105,7 @@
                                     class="far fa-search"></i></button>
                         </div>
                         <div class="nav-right-btn mt-2">
-                            <a href="application-form.html" class="theme-btn"><span
+                            <a href="#" class="theme-btn"><span
                                     class="fal fa-user-plus"></span>S'inscrire</a>
                         </div>
                     </div>

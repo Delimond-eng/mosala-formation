@@ -1,3 +1,7 @@
+@php
+    $formationsArrFooter = config('formations')
+@endphp
+
 <footer class="footer-area">
     <div class="footer-shape">
         <img src="assets/img/shape/03.png" alt="">
@@ -17,7 +21,7 @@
                             d'accompagner chacun vers la réussite.
                         </p>
                         <ul class="footer-contact">
-                            <li><a href="tel:+21236547898"><i class="far fa-phone"></i>+(243) 81 654 7898</a></li>
+                            <li><a href="tel:+243 833 002 021"><i class="far fa-phone"></i>(+243) 833 002 021</a></li>
                             <li><i class="far fa-map-marker-alt"></i>03, Bismarck, Golf Gombe Kinshasa</li>
                             <li><a href="#"><i class="far fa-envelope"></i><span>info@mosala.site</span></a>
                             <li><a href="#"><i class="far fa-envelope"></i><span>contact@mosala.site</span></a>
@@ -42,12 +46,10 @@
                     <div class="footer-widget-box list">
                         <h4 class="footer-widget-title">Formations recentes</h4>
                         <ul class="footer-list">
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Campus Safety</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Student Activities</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Academic Department</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Planning & Administration</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Office Of The Chancellor</a></li>
-                            <li><a href="#"><i class="fas fa-caret-right"></i> Facility Services</a></li>
+
+                            @foreach($formationsArrFooter as $f)
+                                <li><a href="/course-details?slot={{$f['slot']}}"><i class="fas fa-caret-right"></i>{{$f["title"]}}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 <div class="hero-section">
     <div class="hero-slider owl-carousel owl-theme">
-        <div class="hero-single" style="background: url(assets/img/students/slider-3.jpg)">
+        <div class="hero-single" style="background: url(assets/img/students/slider-6.avif)">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-12 col-lg-7">
@@ -17,9 +17,9 @@
                             <h5 data-animation="fadeInRight" data-delay="1s" class="text-white"><i class="far fa-calendar-clock me-1"></i>A partir du 04 avril | formation continue </h5>
 
                             <div class="hero-btn" data-animation="fadeInUp" data-delay="1s">
-                                <a href="about.html" class="theme-btn theme-btn2">En Savoir plus<i
+                                <a href="/contact-us" class="theme-btn theme-btn2">En Savoir plus<i
                                         class="fas fa-arrow-right-long"></i></a>
-                                <a href="contact.html" class="theme-btn">S'Inscrire<i
+                                <a href="/course-details?slot=formation-pratique-sur-la-tva" class="theme-btn">S'Inscrire<i
                                         class="fas fa-arrow-right-long"></i></a>
                             </div>
                         </div>
@@ -43,9 +43,9 @@
                             </p>
                             <h5 data-animation="fadeInRight" data-delay="1s" class="text-white"><i class="far fa-calendar-clock me-1"></i>À partir du 2 juin | Formation continue</h5>
                             <div class="hero-btn" data-animation="fadeInUp" data-delay="1s">
-                                <a href="about.html" class="theme-btn theme-btn2">En Savoir plus<i
+                                <a href="/contact-us" class="theme-btn theme-btn2">En Savoir plus<i
                                         class="fas fa-arrow-right-long"></i></a>
-                                <a href="contact.html" class="theme-btn">S'Inscrire<i
+                                <a href="/course-details?slot=formation-pratique-en-la-securite-electronique" class="theme-btn">S'Inscrire<i
                                         class="fas fa-arrow-right-long"></i></a>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <div class="hero-single" style="background: url(assets/img/students/slider-1.jpg)">
+        <div class="hero-single" style="background: url(assets/img/students/slider-8.png)">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-12 col-lg-7">
@@ -71,9 +71,9 @@
                             <h5 data-animation="fadeInRight" data-delay="1s" class="text-white"><i class="far fa-calendar-clock me-1"></i>A partir du 05 mai | Formation continue</h5>
 
                             <div class="hero-btn" data-animation="fadeInUp" data-delay="1s">
-                                <a href="about.html" class="theme-btn theme-btn2">En Savoir plus<i
+                                <a href="/contact-us" class="theme-btn theme-btn2">En Savoir plus<i
                                         class="fas fa-arrow-right-long"></i></a>
-                                <a href="contact.html" class="theme-btn">S'Inscrire<i
+                                <a href="/course-details?slot=formation-sur-lutilisation-professionnelle-de-lintelligence-artificielle" class="theme-btn">S'Inscrire<i
                                         class="fas fa-arrow-right-long"></i></a>
                             </div>
                         </div>

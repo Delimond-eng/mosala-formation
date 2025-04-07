@@ -2,11 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/more-courses', [\App\Http\Controllers\HomeController::class, 'moreCourses'])->name('more-courses');
+Route::get('/course-details', [\App\Http\Controllers\HomeController::class, 'courseDetails'])->name('course-details');
 
-Route::view('/more-courses', 'pages.more-courses');
 Route::view('/faqs', 'pages.faq');
 Route::view('/contact-us', 'pages.contact');
-Route::view('/course-details', 'pages.course-single');

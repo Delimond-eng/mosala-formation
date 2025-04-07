@@ -11,15 +11,15 @@
                             </div>
                             <form action="#">
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name">
+                                    <input type="text" name="name" class="form-control" placeholder="Nom complet">
                                 </div>
                                 <div class="form-group">
                                     <input type="email" name="email" class="form-control"
-                                           placeholder="Email Address">
+                                           placeholder="Email">
                                 </div>
                                 <div class="form-group">
                                     <select class="form-select" name="service">
-                                        <option value="">Choose Course</option>
+                                        <option value="">Choisir une formation</option>
                                         <option value="1">Art And Design</option>
                                         <option value="2">Acting And Drama</option>
                                         <option value="3">Accounting And Finance</option>
@@ -29,7 +29,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                            <textarea name="message" class="form-control" placeholder="Type Message"
+                                            <textarea name="message" class="form-control" placeholder="Décrivez-vous..."
                                                       rows="4"></textarea>
                                 </div>
                                 <button class="theme-btn">S'Inscrire<i
@@ -72,7 +72,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="contact.html" class="theme-btn mt-5">En savoir plus<i
+                            <a href="/contact-us" class="theme-btn mt-5">En savoir plus<i
                                     class="fas fa-arrow-right-long"></i></a>
                         </div>
                     </div>

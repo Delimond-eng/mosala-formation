@@ -14,12 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->id(); // id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY
+            $table->string('name');
             $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->unsignedBigInteger('profile_id')->nullable();
-            $table->string('profile_type')->nullable();
-            $table->timestamp('user_created_at')->useCurrent();
+            $table->rememberToken(); // ajoute un champ remember_token (VARCHAR 100 nullable)
+            $table->timestamps(); // ajoute created_at et updated_at
         });
     }
 
