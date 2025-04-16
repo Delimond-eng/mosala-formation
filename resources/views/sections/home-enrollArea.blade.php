@@ -19,13 +19,11 @@
                                 </div>
                                 <div class="form-group">
                                     <select class="form-select" name="service">
-                                        <option value="">Choisir une formation</option>
-                                        <option value="1">Art And Design</option>
-                                        <option value="2">Acting And Drama</option>
-                                        <option value="3">Accounting And Finance</option>
-                                        <option value="4">Biology And Conservation</option>
-                                        <option value="5">Science And Engineering</option>
-                                        <option value="6">Health Administration</option>
+                                        <option value="" selected hidden="">Choisir une formation</option>
+                                        @foreach($formations as $f)
+                                            <option value="{{$f["title"]}}">{{$f["title"]}}</option>
+                                        @endforeach
+
                                     </select>
                                 </div>
                                 <div class="form-group">

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -8,3 +9,11 @@ Route::get('/course-details', [\App\Http\Controllers\HomeController::class, 'cou
 
 Route::view('/faqs', 'pages.faq');
 Route::view('/contact-us', 'pages.contact');
+
+Auth::routes();
+Route::prefix("/auth")->middleware(["auth"])->group(function(){
+    Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard'); 
+    Route::post('/formation.create', [App\Http\Controllers\AdminController::class, 'createFormation'])->name('admin.formation.create'); 
+    Route::post('/domaine.create', [App\Http\Controllers\AdminController::class, 'createDomaine'])->name('admin.domaine.create'); 
+    Route::post('/formateur.create', [App\Http\Controllers\AdminController::class, 'createFormateur'])->name('admin.formateur.create'); 
+});

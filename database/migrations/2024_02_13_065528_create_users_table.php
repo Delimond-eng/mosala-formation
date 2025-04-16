@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum("role", ["ADMIN", "TEACHER", "EDITOR"]);
             $table->rememberToken(); // ajoute un champ remember_token (VARCHAR 100 nullable)
             $table->timestamps(); // ajoute created_at et updated_at
         });

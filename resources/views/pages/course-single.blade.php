@@ -109,7 +109,7 @@
                                     <div class="contact-form mt-0 my-0 p-0">
                                         <form method="post">
                                             <div class="row">
-                                                <div class="col-md-6">
+                                                <div class="col-md-12">
                                                     <div class="form-group">
                                                         <input type="text" class="form-control" name="name"
                                                                placeholder="Votre nom complet." required>
@@ -117,8 +117,20 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
+                                                        <input type="tel" class="form-control" name="telephone"
+                                                               placeholder="Téléphone" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
                                                         <input type="email" class="form-control" name="email"
                                                                placeholder="Votre email" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="email"
+                                                               placeholder="Adresse..." required>
                                                     </div>
                                                 </div>
                                             </div>

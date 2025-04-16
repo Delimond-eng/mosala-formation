@@ -74,7 +74,7 @@
                 <div class="row">
                     <div class="col-lg-5">
                         <div class="contact-img">
-                            <img src="assets/img/students/2.jpg" class="h-100vh" style="object-fit: cover" alt="">
+                            <img src="assets/img/students/9.jpg" style="object-fit: cover" alt="">
                         </div>
                     </div>
                     <div class="col-lg-7 align-self-center">
