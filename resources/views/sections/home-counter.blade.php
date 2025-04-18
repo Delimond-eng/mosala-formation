@@ -4,7 +4,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="counter-box">
                     <div class="icon">
-                        <img src="assets/img/icon/course.svg" alt="">
+                        <img src="{{ asset('assets/img/icon/course.svg') }}" alt="">
                     </div>
                     <div>
                         <span class="counter" data-count="+" data-to="100" data-speed="3000">100</span>
@@ -15,7 +15,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="counter-box">
                     <div class="icon">
-                        <img src="assets/img/icon/graduation.svg" alt="">
+                        <img src="{{ asset('assets/img/icon/graduation.svg') }}" alt="">
                     </div>
                     <div>
                         <span class="counter" data-count="+" data-to="1500" data-speed="3000">1500</span>
@@ -26,7 +26,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="counter-box">
                     <div class="icon">
-                        <img src="assets/img/icon/teacher-2.svg" alt="">
+                        <img src="{{ asset('assets/img/icon/teacher-2.svg') }}" alt="">
                     </div>
                     <div>
                         <span class="counter" data-count="+" data-to="100" data-speed="3000">100</span>
@@ -37,7 +37,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="counter-box">
                     <div class="icon">
-                        <img src="assets/img/icon/award.svg" alt="">
+                        <img src="{{ asset('assets/img/icon/award.svg') }}" alt="">
                     </div>
                     <div>
                         <span class="counter" data-count="+" data-to="150" data-speed="3000">150</span>

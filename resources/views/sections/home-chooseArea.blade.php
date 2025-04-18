@@ -20,7 +20,7 @@
                                 <div class="col-md-6">
                                     <div class="choose-item">
                                         <div class="choose-item-icon">
-                                            <img src="assets/img/icon/teacher-2.svg" alt="">
+                                            <img src="{{ asset('assets/img/icon/teacher-2.svg') }}" alt="">
                                         </div>
                                         <div class="choose-item-info">
                                             <h4>Formateurs expérimentés</h4>
@@ -31,7 +31,7 @@
                                 <div class="col-md-6">
                                     <div class="choose-item">
                                         <div class="choose-item-icon">
-                                            <img src="assets/img/icon/course-material.svg" alt="">
+                                            <img src="{{ asset('assets/img/icon/course-material.svg') }}" alt="">
                                         </div>
                                         <div class="choose-item-info">
                                             <h4>Cours en salle</h4>
@@ -42,7 +42,7 @@
                                 <div class="col-md-6">
                                     <div class="choose-item">
                                         <div class="choose-item-icon">
-                                            <img src="assets/img/icon/online-course.svg" alt="">
+                                            <img src="{{ asset('assets/img/icon/online-course.svg') }}" alt="">
                                         </div>
                                         <div class="choose-item-info">
                                             <h4>Cours en ligne</h4>
@@ -53,7 +53,7 @@
                                 <div class="col-md-6">
                                     <div class="choose-item">
                                         <div class="choose-item-icon">
-                                            <img src="assets/img/icon/money.svg" alt="">
+                                            <img src="{{ asset('assets/img/icon/money.svg') }}" alt="">
                                         </div>
                                         <div class="choose-item-info">
                                             <h4>Prix abordable</h4>
@@ -68,7 +68,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="choose-img wow fadeInRight" data-wow-delay=".25s">
-                    <img src="assets/img/students/15.jpg" alt="">
+                    <img src="{{ asset('assets/img/students/15.jpg') }}" alt="">
                 </div>
             </div>
         </div>

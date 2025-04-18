@@ -12,7 +12,8 @@ return [
         "price"=>"100$",
         "date"=>"24 mai",
         "module"=>"10",
-        "duree"=>"04 jours"
+        "duree"=>"04 jours",
+        "spot"=>""
     ],
     [
         "title"=>"Formation pratique en la Sécurité électronique",
@@ -25,7 +26,8 @@ return [
         "price"=>"30$",
         "date"=>"03 Février",
         "module"=>"04",
-        "duree"=>"03 jours"
+        "duree"=>"03 jours",
+        "spot"=>""
     ],
     [
         "title"=>"Formation en Comptabilité Informatisée(Syscohada).",
@@ -38,11 +40,12 @@ return [
         "price"=>"100$",
         "date"=>"25 Février",
         "module"=>"05",
-        "duree"=>"04 jours"
+        "duree"=>"04 jours",
+        "spot"=>"https://youtu.be/URgOWfUsYgk"
     ],
     [
         "title"=>"Formation sur l'utilisation professionnelle de l'Intelligence Artificielle.",
-        "description"=>"L’Intelligence Artificielle révolutionne le monde du travail… et vous ? Ne restez pas à la traîne : apprenez à maîtriser les outils d’IA les plus puissants pour automatiser, créer, analyser et gagner du temps dans votre quotidien professionnel.Cette formation vous plonge dans le concret avec des cas pratiques adaptés à votre domaine : bureautique, marketing, création de contenu, programmation, gestion de projet et bien plus encore.",
+        "description"=>"L'Intelligence Artificielle révolutionne le monde du travail… et vous ? Ne restez pas à la traîne : apprenez à maîtriser les outils d’IA les plus puissants pour automatiser, créer, analyser et gagner du temps dans votre quotidien professionnel.Cette formation vous plonge dans le concret avec des cas pratiques adaptés à votre domaine : bureautique, marketing, création de contenu, programmation, gestion de projet et bien plus encore.",
         "key"=>"Intelligence Artificielle",
         "slot"=>"formation-sur-lutilisation-professionnelle-de-lintelligence-artificielle",
         "media"=>"uploads/formations/03.jpg",
@@ -51,6 +54,7 @@ return [
         "price"=>"30$",
         "date"=>"30 mai",
         "module"=>"04",
-        "duree"=>"03 jours"
+        "duree"=>"03 jours",
+        "spot"=>"https://www.youtube.com/shorts/ICU55I5f1lE"
     ],
 ];

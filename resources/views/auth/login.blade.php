@@ -50,9 +50,12 @@
 @push("scripts")
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const dangertoastExample = document.getElementById("solid-secondaryToast");
-        const toast = new bootstrap.Toast(dangertoastExample);
-        toast.show();
+        if(document.getElementById("solid-secondaryToast")){
+            const dangertoastExample = document.getElementById("solid-secondaryToast");
+            const toast = new bootstrap.Toast(dangertoastExample);
+            toast.show();
+        }
+        
     })
 </script>
 @endpush

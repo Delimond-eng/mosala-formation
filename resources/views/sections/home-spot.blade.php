@@ -23,7 +23,7 @@
                         <div class="col-lg-12">
                             <div class="video-wrapper">
                                 <a class="play-btn popup-youtube"
-                                   href="https://www.youtube.com/watch?v=ckHzmP1evNU">
+                                   href="https://www.youtube.com/shorts/ICU55I5f1lE">
                                     <i class="fas fa-play"></i>
                                 </a>
                             </div>

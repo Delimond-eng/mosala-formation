@@ -15,7 +15,7 @@
             <div class="col-md-6 col-lg-3">
                 <div class="team-item wow fadeInUp" data-wow-delay=".25s">
                     <div class="team-img">
-                        <img src="assets/img/students/t-1.jpg" alt="thumb">
+                        <img src="{{ asset('assets/img/students/t-1.jpg') }}" alt="thumb">
                     </div>
                     <div class="team-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -35,7 +35,7 @@
             <div class="col-md-6 col-lg-3">
                 <div class="team-item wow fadeInUp" data-wow-delay=".50s">
                     <div class="team-img">
-                        <img src="assets/img/students/t-2.jpg" alt="thumb">
+                        <img src="{{ asset('assets/img/students/t-2.jpg') }}" alt="thumb">
                     </div>
                     <div class="team-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -55,7 +55,7 @@
             <div class="col-md-6 col-lg-3">
                 <div class="team-item wow fadeInUp" data-wow-delay=".75s">
                     <div class="team-img">
-                        <img src="assets/img/students/t-3.jpg" alt="thumb">
+                        <img src="{{ asset('assets/img/students/t-3.jpg') }}" alt="thumb">
                     </div>
                     <div class="team-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -75,7 +75,7 @@
             <div class="col-md-6 col-lg-3">
                 <div class="team-item wow fadeInUp" data-wow-delay="1s">
                     <div class="team-img">
-                        <img src="assets/img/students/t-4.jpg" alt="thumb">
+                        <img src="{{ asset('assets/img/students/t-4.jpg') }}" alt="thumb">
                     </div>
                     <div class="team-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>

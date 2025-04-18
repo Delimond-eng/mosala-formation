@@ -74,7 +74,7 @@
                 <div class="row">
                     <div class="col-lg-5">
                         <div class="contact-img">
-                            <img src="assets/img/students/9.jpg" style="object-fit: cover" alt="">
+                            <img src="{{ asset('assets/img/students/9.jpg') }}" style="object-fit: cover" alt="">
                         </div>
                     </div>
                     <div class="col-lg-7 align-self-center">

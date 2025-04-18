@@ -6,7 +6,7 @@
                     <div class="feature-item">
                         <span class="count">01</span>
                         <div class="feature-icon">
-                            <img src="assets/img/icon/teacher-2.svg" alt="">
+                            <img src="{{ asset('assets/img/icon/teacher-2.svg') }}" alt="">
                         </div>
                         <div class="feature-content">
                             <h4 class="feature-title">Formateurs passionnés.</h4>
@@ -18,7 +18,7 @@
                     <div class="feature-item">
                         <span class="count">02</span>
                         <div class="feature-icon">
-                            <img src="assets/img/icon/course-material.svg" alt="">
+                            <img src="{{ asset('assets/img/icon/course-material.svg') }}" alt="">
                         </div>
                         <div class="feature-content">
                             <h4 class="feature-title">Cours en salle.</h4>
@@ -30,7 +30,7 @@
                     <div class="feature-item">
                         <span class="count">03</span>
                         <div class="feature-icon">
-                            <img src="assets/img/icon/online-course.svg"" alt="">
+                            <img src="{{ asset('assets/img/icon/online-course.svg') }}"" alt="">
                         </div>
                         <div class=" feature-content">
                             <h4 class="feature-title">Cours en ligne</h4>
@@ -42,7 +42,7 @@
                     <div class="feature-item">
                         <span class="count">04</span>
                         <div class="feature-icon">
-                            <img src="assets/img/icon/money.svg" alt="">
+                            <img src="{{ asset('assets/img/icon/money.svg') }}" alt="">
                         </div>
                         <div class="feature-content">
                             <h4 class="feature-title">Prix abordable</h4>

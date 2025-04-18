@@ -29,7 +29,7 @@
                                     <div class="course-single-info">
                                         <div class="single-info author">
                                             <div class="author-img">
-                                                <img src="assets/img/students/t-4.jpg" alt="#">
+                                                <img src="{{ asset('assets/img/students/t-4.jpg') }}" alt="#">
                                             </div>
                                             <div class="single-info-content">
                                                 <h4>Formateur</h4>
@@ -87,7 +87,7 @@
                             <div class="course-details">
                                 <div class="course-details-img mb-30">
                                     <img src="{{$formation["media"]}}" alt="thumb">
-                                    <a class="play-btn popup-youtube" href="https://www.youtube.com/watch?v=ckHzmP1evNU">
+                                    <a class="play-btn popup-youtube" href="{{ $formation["spot"] }}">
                                         <i class="fas fa-play"></i>
                                     </a>
                                 </div>

@@ -15,7 +15,7 @@
                     <span><i class="far fa-map-marker-alt"></i> 25/B Milford Road, New York</span>
                 </div>
                 <div class="event-img">
-                    <img src="assets/img/event/01.jpg" alt="">
+                    <img src="{{ asset('assets/img/event/01.jpg') }}" alt="">
                 </div>
                 <div class="event-info">
                     <div class="event-meta">
@@ -35,7 +35,7 @@
                     <span><i class="far fa-map-marker-alt"></i> 25/B Milford Road, New York</span>
                 </div>
                 <div class="event-img">
-                    <img src="assets/img/event/02.jpg" alt="">
+                    <img src="{{ asset('assets/img/event/02.jpg') }}" alt="">
                 </div>
                 <div class="event-info">
                     <div class="event-meta">
@@ -55,7 +55,7 @@
                     <span><i class="far fa-map-marker-alt"></i> 25/B Milford Road, New York</span>
                 </div>
                 <div class="event-img">
-                    <img src="assets/img/event/03.jpg" alt="">
+                    <img src="{{ asset('assets/img/event/03.jpg') }}" alt="">
                 </div>
                 <div class="event-info">
                     <div class="event-meta">
@@ -75,7 +75,7 @@
                     <span><i class="far fa-map-marker-alt"></i> 25/B Milford Road, New York</span>
                 </div>
                 <div class="event-img">
-                    <img src="assets/img/event/04.jpg" alt="">
+                    <img src="{{ asset('assets/img/event/04.jpg') }}" alt="">
                 </div>
                 <div class="event-info">
                     <div class="event-meta">

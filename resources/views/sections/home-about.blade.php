@@ -6,7 +6,7 @@
                     <div class="about-img">
                         <div class="row g-4">
                             <div class="col-md-6">
-                                <img class="img-1" src="assets/img/students/11.avif" alt="">
+                                <img class="img-1" src="{{ asset('assets/img/students/11.avif') }}" alt="">
                                 <div class="about-experience mt-4">
                                     <div
                                         class="about-experience-icon p-2 d-flex justify-content-center align-items-center">
@@ -16,8 +16,8 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <img class="img-2" src="assets/img/students/6.jpg" alt="">
-                                <img class="img-3 mt-4" src="assets/img/students/1.jpg" alt="">
+                                <img class="img-2" src="{{ asset('assets/img/students/6.jpg') }}" alt="">
+                                <img class="img-3 mt-4" src="{{ asset('assets/img/students/1.jpg') }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                             <div class="col-md-7">
                                 <div class="about-item">
                                     <div class="about-item-icon">
-                                        <img src="assets/img/icon/open-book.svg" alt="">
+                                        <img src="{{ asset('assets/img/icon/open-book.svg') }}" alt="">
                                     </div>
                                     <div class="about-item-content">
                                         <h5>Formation professionnelle</h5>
@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="about-item">
                                     <div class="about-item-icon">
-                                        <img src="assets/img/icon/global-education.svg" alt="">
+                                        <img src="{{ asset('assets/img/icon/global-education.svg') }}" alt="">
                                     </div>
                                     <div class="about-item-content">
                                         <h5>Achat des livres</h5>
