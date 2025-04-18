@@ -14,6 +14,7 @@ Auth::routes();
 Route::prefix("/adm")->middleware(["auth"])->group(function(){
     Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard'); 
     Route::view('/formations', "pages.auth.formations")->name('admin.formations'); 
+    Route::view('/formateurs', "pages.auth.formateurs")->name('admin.formateurs'); 
     Route::view('/students', "pages.auth.students")->name('admin.students'); 
     Route::view('/sliders', "pages.auth.sliders")->name('admin.sliders'); 
     Route::post('/formation.create', [App\Http\Controllers\AdminController::class, 'createFormation'])->name('admin.formation.create'); 

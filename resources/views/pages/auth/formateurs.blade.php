@@ -6,58 +6,68 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <div class="card-body d-flex justify-content-between">
-                        <h2>Liste des formations</h2>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-add-formation"> <i class="fa fa-plus me-1"></i> Nouvelle formation </button>
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h4 class="card-title">Liste des formateurs</h4>
+                            </div><!--end col-->
+                            <div class="col-auto">
+                                <button class="btn btn-primary"><i class="fas fa-plus me-1"></i>Nouveau formateurs</button>
+                            </div><!--end col-->
+                        </div><!--end row-->
+                    </div><!--end card-header-->
+                    <div class="card-body pt-0">
+                        <div class="table-responsive">
+                            <table class="table mb-0" id="datatable_1">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>ID</th>
+                                        <th>Roal</th>
+                                        <th>Last activity</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <img src="{{asset('admin/images/users/avatar-1.jpg')}}" class="me-2 thumb-md align-self-center rounded" alt="...">
+                                                <div class="flex-grow-1 text-truncate">
+                                                    <h6 class="m-0">Unity Pugh</h6>
+                                                    <a href="#" class="fs-12 text-primary">dummy@gmail.com</a>
+                                                </div><!--end media body-->
+                                            </div>
+                                        </td>
+                                        <td>#9958</td>
+                                        <td><a href="#" class="text-body text-decoration-underline">Manager</a></td>
+                                        <td>Today, 02:30pm</td>
+                                        <td><span class="badge rounded text-success bg-success-subtle">Active</span></td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-pencil-alt"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-trash-alt"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
-            @for ($i=0; $i<6; $i++)
-            <div class="col-md-6 col-lg-4">
-            <div class="card">
-                <div class="card-body">
-                    <div class="">
-                        <img src="{{ asset('admin/images/extra/card/img-1.jpg') }}" alt="" class="img-fluid rounded">
-                        <div class="mt-3">
-                            <span class="badge bg-purple-subtle text-purple px-2 py-1 fw-semibold ">Finance</span> |
-                            <p class="mb-0 text-muted fs-12 d-inline-block">15 Sep 2024</p>
-                        </div>
-                        <a href="#" class="d-block fs-18 fw-medium text-body my-2 text-truncate">How does cancer grow and spread?</a>
-                        <p class="text-muted">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                        <hr class="hr-dashed">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0">
-                                    <img src="{{ asset('admin/images/users/avatar-10.jpg') }}" alt="" class="thumb-md rounded-circle">
-                                </div>
-                                <div class="flex-grow-1 ms-2 text-truncate text-start">
-                                    <h6 class="m-0 text-dark">Billy Pearson</h6>
-                                    <p class="mb-0 text-muted">by <a href="#">admin</a></p>
-                                </div><!--end media-body-->
-                            </div>
-                            <div class="align-self-center">
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-pencil-alt"></i></button>
-                                    <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-trash-alt"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end blog-card-->
-                </div><!--end card-body-->
-            </div><!--end card-->
-            </div>
-            @endfor
+            </div> <!-- end col -->
+        </div>
+    </div><!-- container -->
 
-    </div><!--end row-->
-</div><!-- container -->
 
-<!--Start Rightbar-->
-<!--end Rightbar-->
-<!--Start Footer-->
+    <!--Start Rightbar-->
+    <!--end Rightbar-->
+    <!--Start Footer-->
 
-@include("components.admin.footer")
+    @include("components.admin.footer")
 
-<!--end footer-->
+    <!--end footer-->
 </div>
 
 
@@ -142,3 +152,8 @@
     </div><!--end modal-dialog-->
 </div>
 @endsection
+@push("scripts")
+<script src="{{ asset('admin/libs/simple-datatables/umd/simple-datatables.js') }}"></script>
+<script src="{{ asset('admin/js/pages/datatable.init.js') }}"></script>
+<script src="{{ asset('admin/js/app.js') }}"></script>
+@endpush

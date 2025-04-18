@@ -40,6 +40,13 @@
                         </a>
                     </li><!--end nav-item-->
                     <li class="nav-item">
+                        <a class="nav-link {{ Route::is("admin.formateurs") ? 'active' : '' }}" href="{{ route("admin.formateurs") }}" role="button"
+                            aria-expanded="false" aria-controls="sidebarApplications">
+                            <i class="iconoir-view-grid menu-icon"></i>
+                            <span>Gestion des formateurs</span>
+                        </a>
+                    </li><!--end nav-item-->
+                    <li class="nav-item">
                         <a class="nav-link  {{ Route::is("admin.sliders") ? 'active' : '' }}" href="{{ route("admin.sliders") }}" role="button">
                             <i class="iconoir-compact-disc menu-icon"></i>
                             <span>Gestion de diaporama</span>
