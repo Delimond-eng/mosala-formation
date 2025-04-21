@@ -19,14 +19,15 @@ class Formation extends Model
         'quize',
         'lang',
         'date',
-        'durée',
+        'duree',
+        'duree_unite',
         'time',
         'place',
         'type',
         'spotlink',
         'domaine_id',
         'formateur_id',
-        'slider',
+        'user_id',
     ];
 
     protected $casts = [

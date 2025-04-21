@@ -1,5 +1,5 @@
 @php
-    $formationsArr = config('formations')
+    $formationsArr = \App\Models\Formation::all();
 @endphp
 
 <header class="header">
@@ -75,10 +75,10 @@
                                                         afin d'accompagner chacun vers la réussite.</p>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-sm-4 col-md-4">
+                                            <div class="col-12 col-sm-8 col-md-8">
                                                 <ul class="mega-menu-item">
                                                     @foreach($formationsArr as $f)
-                                                    <li><a class="dropdown-item" href="/course-details?slot={{$f['slot']}}">{{$f["title"]}}</a></li>
+                                                    <li><a class="dropdown-item" href="/course-details?slug={{$f->slug}}">{{$f->title}}</a></li>
                                                     <li>
                                                     @endforeach
                                                 </ul>

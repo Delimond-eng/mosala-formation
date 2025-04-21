@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('formations', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->string('slug');
             $table->string('media');
             $table->string('price');
@@ -24,7 +24,8 @@ return new class extends Migration
             $table->string('quize');
             $table->string('lang')->default('Français');
             $table->string('date')->nullable();
-            $table->string('durée')->default("Continue");
+            $table->string('duree')->nullable();
+            $table->string('duree_unite')->nullable();
             $table->string('time')->nullable();
             $table->string('place')->default("online");
             $table->string('type')->nullable();

@@ -49,8 +49,6 @@
         
         <script src="{{ asset('admin/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('admin/libs/simplebar/simplebar.min.js') }}"></script>
-        <script src="{{ asset('admin/libs/apexcharts/apexcharts.min.js') }}"></script>
-        <script src="{{ asset('admin/js/pages/ecommerce-index.init.js') }}"></script>
         <script src="{{ asset('admin/js/app.js') }}"></script>
         <script src="{{ asset("admin/libs/sweetalert2/sweetalert2.min.js") }}"></script>
         @stack("scripts")

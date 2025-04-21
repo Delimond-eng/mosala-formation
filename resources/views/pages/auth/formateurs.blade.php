@@ -21,29 +21,29 @@
                             <table class="table mb-0" id="datatable_1">
                                 <thead class="table-light">
                                     <tr>
-                                        <th>Name</th>
-                                        <th>ID</th>
-                                        <th>Roal</th>
-                                        <th>Last activity</th>
-                                        <th>Status</th>
+                                        <th>Nom complet & email</th>
+                                        <th>Téléphone</th>
+                                        <th>Genre</th>
+                                        <th>Créer par</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($formateurs as $f)
                                     <tr>
                                         <td class="d-flex align-items-center">
                                             <div class="d-flex align-items-center">
-                                                <img src="{{asset('admin/images/users/avatar-1.jpg')}}" class="me-2 thumb-md align-self-center rounded" alt="...">
-                                                <div class="flex-grow-1 text-truncate">
-                                                    <h6 class="m-0">Unity Pugh</h6>
-                                                    <a href="#" class="fs-12 text-primary">dummy@gmail.com</a>
+                                                <img src="{{!empty($f->photo) ? $f->photo : asset("assets/img/avatar.png")}}" class="me-2 thumb-md align-self-center rounded" alt="...">
+                                                <div class="flex-grow-1 text-tr uncate">
+                                                    <h6 class="m-0">{{ $f->name .''.$f->nickname }}</h6>
+                                                    <a href="#" class="fs-12 text-primary">{{ $f->email }}</a>
                                                 </div><!--end media body-->
                                             </div>
                                         </td>
-                                        <td>#9958</td>
-                                        <td><a href="#" class="text-body text-decoration-underline">Manager</a></td>
-                                        <td>Today, 02:30pm</td>
-                                        <td><span class="badge rounded text-success bg-success-subtle">Active</span></td>
+                                     
+                                        <td>{{ $f->phone }}</td>
+                                        <td>{{ $f->gender }}</td>
+                                        <td>{{ $f->user->name }}</td>
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Basic example">
                                                 <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-pencil-alt"></i></button>
@@ -51,6 +51,7 @@
                                             </div>
                                         </td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

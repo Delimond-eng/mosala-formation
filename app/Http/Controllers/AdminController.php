@@ -31,7 +31,7 @@ class AdminController extends Controller
         $data = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'media' => 'required|string',
+            'media' => 'required|image|mimes:jpeg,png,jpg,gif,webp,avif',
             'price' => 'required|string',
             'module' => 'required|string',
             'quize' => 'required|string',
@@ -43,14 +43,46 @@ class AdminController extends Controller
             'type' => 'nullable|string',
             'spotlink' => 'nullable|string',
             'domaine_id' => 'required|exists:domaines,id',
-            'formateur_id' => 'required|exists:formateurs,id',
-            'slider' => 'nullable|boolean',
+            'formateur_id' => 'required|exists:formateurs,id'
         ]);
-
-        $data['slot'] = Str::slug(strtolower($data['title']));
+        
+        // 📁 Traitement du fichier image
+        if ($request->hasFile('media')) {
+            $file = $request->file('media');
+            $fileName = time() . '_' . $file->getClientOriginalName();
+            $filePath = $file->move(public_path('uploads/formations'), $fileName);
+            $data['media'] = url('uploads/formations/' . $fileName); 
+        }
+        
+        $data['slug'] = Str::slug(strtolower($data['title']));
         $data["user_id"] = Auth::id();
+        
         $formation = Formation::create($data);
-        return response()->json(['message' => 'Formation créée avec succès', 'data' => $formation], 201);
+
+        return redirect()->back()->with('success', 'Configuration enregistrée avec succès.');
+        
+        /* return response()->json([
+            'message' => 'Formation créée avec succès',
+            'data' => $formation
+        ], 201); */
+        
+    }
+
+    public function viewFormationPage(){
+        $domaines = Domaine::all();
+        $formateurs = Formateur::all();
+        $formations = Formation::with(["domaine", "formateur"])->orderByDesc("id")->paginate(6);
+        return view("pages.auth.formations", [
+            "domaines"=>$domaines,
+            "formateurs"=>$formateurs,
+            "formations"=>$formations
+        ]);
+    }
+    public function viewFormateurPage(){
+        $formateurs = Formateur::all();
+        return view("pages.auth.formateurs", [
+            "formateurs"=>$formateurs
+        ]);
     }
 
 

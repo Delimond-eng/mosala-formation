@@ -4469,6 +4469,11 @@
      width: 30px
  }
 
+ .form-label {
+     color: #000000 !important;
+     font-weight: 900 !important;
+ }
+
  @-webkit-keyframes swal2-animate-success-line-tip {
      0% {
          top: 1.1875em;

@@ -14,32 +14,38 @@
             </div>
         </div>
         <div class="row">
-            @foreach(array_slice($formations, 0, 3) as $f)
+            @foreach($formations as $f)
                 <div class="col-md-6 col-lg-4">
                     <div class="course-item wow fadeInUp" data-wow-delay=".75s">
                         <div class="course-img">
-                            <span class="course-tag"><i class="far fa-bookmark"></i> {{ $f["domaine"] }}</span>
-                            <img src="{{ $f["media"] }}" alt="">
-                            <a href="/course-details?slot={{$f['slot']}}" class="btn"><i class="far fa-link"></i></a>
+                            <span class="course-tag"><i class="far fa-bookmark"></i> {{ $f->domaine->libelle }}</span>
+                            <img src="{{ $f->media }}" alt="">
+                            <a href="/course-details?slug={{$f->slug}}" class="btn"><i class="far fa-link"></i></a>
                         </div>
                         <div class="course-content">
                             <div class="course-meta">
-                                <span class="course-meta-left"><i class="far fa-book"></i> {{ $f["module"] }} Modules</span>
+                                <span class="course-meta-left"><i class="far fa-book"></i> {{ $f->module }} Modules</span>
                                 <div class="course-rating">
-
+                                    <i class="far fa-clock-desk me-1"></i>Durée {{ $f->duree . ''.$f->duree_unite}} 
                                 </div>
                             </div>
                             <h4 class="course-title">
-                                <a href="{{ url("/course-details") }}">{{ $f["title"] }}</a>
+                                <a href="/course-details?slug={{$f->slug}}">{{ $f["title"] }}</a>
                                 {{--<a href="{{ $link }}">{{ $title }}</a>--}}
                             </h4>
                             {{--        <p class="course-text">{{ Str::limit($description, 50) }}</p>--}}
                             <div class="course-bottom">
+                                @if($f->date)
                                 <div class="course-bottom-left">
-                                    <span><i class="far fa-calendar-clock"></i>{{ $f["date"] }}</span>
-                                    <span><i class="far fa-clock"></i>{{ $f["duree"] }}</span>
+                                    <span><i class="far fa-calendar-clock"></i>{{ $f->date }}</span>
+                                    <span><i class="far fa-clock"></i>{{ $f->time }}</span>
                                 </div>
-                                <span class="course-price">{{ $f["price"] }}</span>
+                                @else
+                                <div class="course-bottom-left">
+                                    <span>Formation en continue</span>
+                                </div>
+                                @endif
+                                <span class="course-price">{{ $f->price }} $</span>
                             </div>
                         </div>
                     </div>

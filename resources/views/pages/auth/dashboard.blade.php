@@ -24,7 +24,7 @@
                             <div class="card-body">
                                 <div class="row d-flex justify-content-center ">
                                     <div class="col-12 col-md-6">
-                                        <h2 class="fs-22 mt-0 mb-1 fw-bold">$8365.00</h2>
+                                        <h2 class="fs-22 mt-0 mb-1 fw-bold">$0.00</h2>
                                         <p class="mb-0 text-truncate text-muted"><span class="text-success"><i class="mdi mdi-trending-up"></i>8.5%</span> New Sessions Today</p>
                                     </div><!--end col-->
                                     <div class="col-12 col-md-6 align-self-center text-start text-md-end">
@@ -42,7 +42,7 @@
                                         <div class="d-flex justify-content-center align-items-center thumb-xl border border-secondary rounded-circle">
                                             <i class="icofont-opencart h1 align-self-center mb-0 text-secondary"></i>
                                         </div>
-                                        <h5 class="mt-2 mb-0 fs-14">New Order</h5>
+                                        <h5 class="mt-2 mb-0 fs-14">Inscriptions</h5>
                                     </div><!--end col-->
                                     <div class="col align-self-center ">
                                         <div id="line-2" class="apex-charts float-end"></div>
@@ -52,11 +52,11 @@
                             <div class="card-body">
                                 <div class="row d-flex justify-content-center ">
                                     <div class="col-12 col-md-6">
-                                        <h2 class="fs-22 mt-0 mb-1 fw-bold">722</h2>
-                                        <p class="mb-0 text-truncate text-muted"><span class="text-success"><i class="mdi mdi-trending-up"></i>8.5%</span> New Sessions Today</p>
+                                        <h2 class="fs-22 mt-0 mb-1 fw-bold">0</h2>
+                                        <p class="mb-0 text-truncate text-muted"><span class="text-success"><i class="mdi mdi-trending-up"></i>0</span> Pour aujourd'hui</p>
                                     </div><!--end col-->
                                     <div class="col-12 col-md-6 align-self-center text-start text-md-end">
-                                        <button type="button" class="btn btn-outline-secondary btn-sm px-2 mt-2 mt-md-0 ">View Report</button>
+                                        <button type="button" class="btn btn-outline-secondary btn-sm px-2 mt-2 mt-md-0 ">Voir Rapport</button>
                                     </div><!--end col-->
                                 </div><!--end row-->
                             </div><!--end card-body-->
@@ -89,50 +89,25 @@
                     <div class="card-body pt-0">
                         <div id="monthly_income" class="apex-charts"></div>
                         <div class="row">
-                            <div class="col-md-6 col-lg-3">
+                            <div class="col-md-6 col-lg-6">
                                 <div class="card shadow-none border mb-3 mb-lg-0">
                                     <div class="card-body">
                                         <div class="row align-items-center">
                                             <div class="col text-center">
-                                                <span class="fs-18 fw-semibold">$24,500</span>
-                                                <h6 class="text-uppercase text-muted mt-2 m-0">Today's Revenue</h6>
+                                                <span class="fs-18 fw-semibold">0,00</span>
+                                                <h6 class="text-uppercase text-muted mt-2 m-0">INSCRIPTIONS</h6>
                                             </div><!--end col-->
                                         </div> <!-- end row -->
                                     </div><!--end card-body-->
                                 </div> <!--end card-body-->
                             </div><!--end col-->
-                            <div class="col-md-6 col-lg-3">
+                            <div class="col-md-6 col-lg-6">
                                 <div class="card shadow-none border mb-3 mb-lg-0">
                                     <div class="card-body">
                                         <div class="row align-items-center">
                                             <div class="col text-center">
-                                                <span class="fs-18 fw-semibold">82.8%</span>
-                                                <h6 class="text-uppercase text-muted mt-2 m-0">Conversion Rate</h6>
-                                            </div><!--end col-->
-                                        </div> <!-- end row -->
-                                    </div><!--end card-body-->
-                                </div> <!--end card-body-->
-                            </div><!--end col-->
-
-                            <div class="col-md-6 col-lg-3">
-                                <div class="card shadow-none border mb-3 mb-lg-0">
-                                    <div class="card-body">
-                                        <div class="row align-items-center">
-                                            <div class="col text-center">
-                                                <span class="fs-18 fw-semibold">$9982.00</span>
-                                                <h6 class="text-uppercase text-muted mt-2 m-0">Total Expenses</h6>
-                                            </div><!--end col-->
-                                        </div> <!-- end row -->
-                                    </div><!--end card-body-->
-                                </div> <!--end card-->
-                            </div><!--end col-->
-                            <div class="col-md-6 col-lg-3">
-                                <div class="card shadow-none border mb-3 mb-lg-0">
-                                    <div class="card-body">
-                                        <div class="row align-items-center">
-                                            <div class="col text-center">
-                                                <span class="fs-18 fw-semibold">$80.5</span>
-                                                <h6 class="text-uppercase text-muted mt-2 m-0">Avg. Value</h6>
+                                                <span class="fs-18 fw-semibold">0,00</span>
+                                                <h6 class="text-uppercase text-muted mt-2 m-0">FORMATION ACTIVE</h6>
                                             </div><!--end col-->
                                         </div> <!-- end row -->
                                     </div><!--end card-body-->
@@ -421,3 +396,8 @@
     <!--end footer-->
 </div>
 @endsection
+
+@push("scripts")
+<script src="{{ asset('admin/libs/apexcharts/apexcharts.min.js') }}"></script>
+<script src="{{ asset('admin/js/pages/ecommerce-index.init.js') }}"></script>
+@endpush

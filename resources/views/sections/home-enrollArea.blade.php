@@ -21,16 +21,15 @@
                                     <select class="form-select" name="service">
                                         <option value="" selected hidden="">Choisir une formation</option>
                                         @foreach($formations as $f)
-                                            <option value="{{$f["title"]}}">{{$f["title"]}}</option>
+                                            <option value="{{$f->id}}">{{$f->title}}</option>
                                         @endforeach
-
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                            <textarea name="message" class="form-control" placeholder="Décrivez-vous..."
+                                            <textarea name="desc" class="form-control" placeholder="Décrivez-vous..."
                                                       rows="4"></textarea>
                                 </div>
-                                <button class="theme-btn">S'Inscrire<i
+                                <button class="theme-btn" type="submit">S'Inscrire<i
                                         class="fas fa-arrow-right-long"></i></button>
                             </form>
                         </div>
