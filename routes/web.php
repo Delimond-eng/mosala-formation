@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -18,9 +19,13 @@ Route::prefix("/adm")->middleware(["auth"])->group(function(){
     Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard'); 
     Route::get('/formations', [AdminController::class, "viewFormationPage"])->name('admin.formations'); 
     Route::get('/formateurs', [AdminController::class, "viewFormateurPage"])->name('admin.formateurs'); 
-    Route::view('/students', "pages.auth.students")->name('admin.students'); 
-    Route::view('/sliders', "pages.auth.sliders")->name('admin.sliders'); 
+    Route::get('/students', [AdminController::class, "viewSubscribePage"])->name('admin.students'); 
+    Route::get('/sliders',[AdminController::class, 'viewSliderPage'] )->name('admin.sliders'); 
+    Route::post('/formateur.create', [App\Http\Controllers\AdminController::class, 'createTeacher'])->name('admin.formateur.create'); 
     Route::post('/formation.create', [App\Http\Controllers\AdminController::class, 'createFormation'])->name('admin.formation.create'); 
-    Route::post('/domaine.create', [App\Http\Controllers\AdminController::class, 'createDomaine'])->name('admin.domaine.create'); 
-    Route::post('/formateur.create', [App\Http\Controllers\AdminController::class, 'createFormateur'])->name('admin.formateur.create'); 
+    Route::post('/slider.create', [App\Http\Controllers\AdminController::class, 'createSlider'])->name('admin.slider.create'); 
+    Route::post('/domaine.create', [App\Http\Controllers\AdminController::class, 'createDomaine'])->name('admin.domaine.create');
+    Route::get('/souscriptions-stats', [AdminController::class, 'getSouscriptionsStats'])->name('admin.souscriptions.stats'); 
+    Route::get("/users", [UserController::class, "showAllUsers"])->name("admin.users");
+    Route::post("/user.create", [UserController::class, "createUser"])->name("admin.user.create");
 });

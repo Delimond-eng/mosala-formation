@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Domaine;
 use App\Models\Formateur;
 use App\Models\Formation;
+use App\Models\Slider;
+use App\Models\Souscription;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -18,7 +21,14 @@ class AdminController extends Controller
 
 
     public function index(){
-        return view("pages.auth.dashboard");
+        $countSubscriptions = Souscription::count();
+        $countSubscriptionsNow = Souscription::whereDate("created_at", Carbon::now())->count();
+        $countFormations = Formation::count();
+        return view("pages.auth.dashboard",[
+            "count1"=>$countSubscriptions,
+            "count2"=>$countFormations,
+            "count3"=>$countSubscriptionsNow,
+        ]);
     }
 
     /**
@@ -67,6 +77,65 @@ class AdminController extends Controller
         ], 201); */
         
     }
+    public function createSlider(Request $request)
+    {
+
+        $data = $request->validate([
+            'title' => 'required|string|max:255',
+            'desc' => 'required|string',
+            'datedebut' => 'required|date',
+            'media' => 'required|image|mimes:jpeg,png,jpg,gif,webp,avif',
+            'formation_id' => 'required|exists:formations,id'
+        ]);
+        try{
+            if ($request->hasFile('media')) {
+                $file = $request->file('media');
+                $fileName = time() . '_' . $file->getClientOriginalName();
+                $filePath = $file->move(public_path('uploads/sliders'), $fileName);
+                $data['media'] = url('uploads/sliders/' . $fileName); 
+            }
+            $data["user_id"] = Auth::id();
+            $slider = Slider::create($data);
+            return redirect()->back()->with('success', 'Configuration enregistrée avec succès.');
+        }
+        catch (\Exception $e) {
+            return back()->with('error', $e->getMessage());
+        }
+      
+        
+        /* return response()->json([
+            'message' => 'Formation créée avec succès',
+            'data' => $formation
+        ], 201); */
+        
+    }
+    public function createTeacher(Request $request)
+    {
+
+        $data = $request->validate([
+            'name' => 'required|string',
+            'nickname' => 'required|string',
+            'phone' => 'required|string',
+            'email' => 'required|string',
+            'gender' => 'required|string',
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,webp,avif',
+        ]);
+        try{
+            if ($request->hasFile('photo')) {
+                $file = $request->file('photo');
+                $fileName = time() . '_' . $file->getClientOriginalName();
+                $filePath = $file->move(public_path('uploads/teachers'), $fileName);
+                $data['photo'] = url('uploads/teachers/' . $fileName); 
+            }
+            $data["user_id"] = Auth::id();
+            $slider = Formateur::create($data);
+            return redirect()->back()->with('success', 'Formateur enregistrée avec succès.');
+        }
+        catch (\Exception $e) {
+            return back()->with('error', $e->getMessage());
+        }
+        
+    }
 
     public function viewFormationPage(){
         $domaines = Domaine::all();
@@ -84,29 +153,19 @@ class AdminController extends Controller
             "formateurs"=>$formateurs
         ]);
     }
-
-
-    /**
-     * Crée un nouveau formateur
-     * @param Request $request
-     * @return mixed
-    */
-    public function createFormateur(Request $request)
-    {
-        $data = $request->validate([
-            'name' => 'required|string|max:255',
-            'nickname' => 'required|string|max:255',
-            'gender' => ['required', Rule::in(['Homme', 'Femme'])],
-            'email' => 'nullable|email',
-            'phone' => 'nullable|string',
-            'photo' => 'nullable|string',
+    public function viewSliderPage(){
+        $sliders = Slider::with(["formation", "user"])->get();
+        $formations = Formation::all();
+        return view("pages.auth.sliders", [
+            "sliders"=>$sliders, "formations"=>$formations
         ]);
-
-        $data["user_id"] = Auth::id();
-        $formateur = Formateur::create($data);
-        return response()->json(['message' => 'Formateur créé avec succès', 'data' => $formateur], 201);
     }
-
+    public function viewSubscribePage(){
+        $subscriptions = Souscription::with(["formation", "user"])->get();
+        return view("pages.auth.students", [
+            "subscriptions"=>$subscriptions
+        ]);
+    }
 
     /**
      * Crée un nouveau domaine
@@ -122,5 +181,26 @@ class AdminController extends Controller
         $data["user_id"] = Auth::id();
         $domaine = Domaine::create($data);
         return response()->json(['message' => 'Domaine créé avec succès', 'data' => $domaine], 201);
+    }
+
+
+    public function getSouscriptionsStats()
+    {
+        $souscriptions = Souscription::selectRaw('MONTH(created_at) as month, COUNT(*) as total')
+            ->groupByRaw('MONTH(created_at)')
+            ->pluck('total', 'month')
+            ->toArray();
+
+        // On prépare un tableau avec 0 par défaut pour chaque mois
+        $monthlySouscriptions = array_fill(1, 12, 0);
+
+        foreach ($souscriptions as $month => $total) {
+            $monthlySouscriptions[$month] = $total;
+        }
+
+        // On remet l’indexation pour le graphique JS (index 0 à 11)
+        $monthlySouscriptions = array_values($monthlySouscriptions);
+
+        return response()->json($monthlySouscriptions);
     }
 }

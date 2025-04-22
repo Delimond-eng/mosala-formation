@@ -17,6 +17,7 @@ class Formateur extends Model
         'email',
         'phone',
         'photo',
+        'user_id',
     ];
 
     /**

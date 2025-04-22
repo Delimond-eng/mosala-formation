@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Domaine;
 use App\Models\Formateur;
 use App\Models\Formation;
+use App\Models\Slider;
 use App\Models\Souscription;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,8 +14,9 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $sliders = Slider::with(["formation.domaine", "formation.formateur"])->get();
         $formations = Formation::with(["domaine", "formateur"])->orderByDesc("id")->paginate(6);
-        return view('home', ["formations"=>$formations]);
+        return view('home', ["formations"=>$formations, "sliders"=>$sliders]);
     }
 
     public function moreCourses(Request $request)

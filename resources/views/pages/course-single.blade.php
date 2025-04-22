@@ -32,7 +32,7 @@
                                         </div>
                                         <div class="single-info-content">
                                             <h4>Formateur</h4>
-                                            <span>{{$formation->formateur->name . ''.$formation->formateur->nickname}}</span>
+                                            <span>{{$formation->formateur->name . ' '.$formation->formateur->nickname}}</span>
                                         </div>
                                     </div>
                                     <div class="single-info category">

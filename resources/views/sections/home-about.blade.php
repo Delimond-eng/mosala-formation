@@ -7,7 +7,7 @@
                         <div class="row g-4">
                             <div class="col-md-6">
                                 <img class="img-1" src="{{ asset('assets/img/students/11.avif') }}" alt="">
-                                <div class="about-experience mt-4">
+                                <div class="about-experience mt-4 d-lg-flex d-sm-none d-md-none d-none">
                                     <div
                                         class="about-experience-icon p-2 d-flex justify-content-center align-items-center">
                                         <i class="far fa-graduation-cap text-primary"></i>
@@ -15,7 +15,7 @@
                                     <b class="text-start">Plus de 5 ans <br> d'Experience </b>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 d-lg-block d-sm-none d-md-none d-none">
                                 <img class="img-2" src="{{ asset('assets/img/students/6.jpg') }}" alt="">
                                 <img class="img-3 mt-4" src="{{ asset('assets/img/students/1.jpg') }}" alt="">
                             </div>

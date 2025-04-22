@@ -9,16 +9,49 @@
                                 <h3>Inscription</h3>
                                 <p>Inscrivez-vous à la formation de votre choix.</p>
                             </div>
-                            <form action="#">
+
+                            <form method="post" method="post" action="{{ route('souscrire') }}">
+                                @csrf
+                                {{-- Succès --}}
+                                @if(session('success'))
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    {{ session('success') }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                                @endif
+
+                                {{-- Erreur générale --}}
+                                @if(session('error'))
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    {{ session('error') }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                                @endif
+
+                                {{-- Erreurs de validation --}}
+                                @if ($errors->any())
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <ul class="mb-0">
+                                        @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                                @endif
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control" placeholder="Nom complet">
+                                    <input type="text" name="fullname" class="form-control" placeholder="Nom complet">
                                 </div>
                                 <div class="form-group">
                                     <input type="email" name="email" class="form-control"
                                            placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                    <select class="form-select" name="service">
+                                    <input type="tel" name="phone" class="form-control"
+                                           placeholder="+24381000000">
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-select" name="formation_id">
                                         <option value="" selected hidden="">Choisir une formation</option>
                                         @foreach($formations as $f)
                                             <option value="{{$f->id}}">{{$f->title}}</option>
@@ -26,8 +59,13 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                            <textarea name="desc" class="form-control" placeholder="Décrivez-vous..."
-                                                      rows="4"></textarea>
+                                    <select name="pays" class="form-control">
+                                        <option value="RDC">Rép. Dém. du Congo</option>
+                                        <option value="Congo Brazza">République du Congo</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="ville" class="form-control" placeholder="ex:Kinshasa" value="Kinshasa">
                                 </div>
                                 <button class="theme-btn" type="submit">S'Inscrire<i
                                         class="fas fa-arrow-right-long"></i></button>

@@ -58,6 +58,12 @@
                             <span>Liste des inscrits</span><span class="badge rounded text-success bg-success-subtle ms-1">New</span>
                         </a>
                     </li><!--end nav-item-->
+                    <li class="nav-item">
+                        <a class="nav-link {{ Route::is("admin.users") ? 'active' : '' }}" href="{{ route("admin.users") }}">
+                            <i class="iconoir-home-user menu-icon"></i>
+                            <span>Gestion des utilisateurs</span>
+                        </a>
+                    </li><!--end nav-item-->
                 </ul><!--end navbar-nav--->
                 <div class="update-msg text-center">
                     <div class="d-flex justify-content-center align-items-center thumb-lg update-icon-box  rounded-circle mx-auto">

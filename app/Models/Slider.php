@@ -19,6 +19,10 @@ class Slider extends Model
         'user_id',
     ];
 
+    protected $casts = [
+        'datedebut' => 'datetime',
+    ];
+
 
     public function formation(){
         return $this->belongsTo(Formation::class, 'formation_id');
