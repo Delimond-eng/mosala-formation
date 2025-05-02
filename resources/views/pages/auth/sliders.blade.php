@@ -33,10 +33,12 @@
                                     <h1 class="my-4 font-weight-bold">{{ $s->title }}</h1>
                                     <p class="fs-14 text-muted">{{ $s->desc }}
                                     </p>
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-outline-primary"><i class="fa fa-pencil-alt me-1"></i></button>
-                                        <button type="button" class="btn btn-outline-danger"><i class="fa fa-trash-alt"></i></button>
-                                    </div>
+                                    <button type="button" class="btn btn-outline-primary btn-sm me-1"><i class="fa fa-pencil-alt"></i></button>
+                                    <form action="{{ route('delete', ['table' => 'sliders', 'val' => $s->id]) }}" method="GET" style="display: inline;" class="delete-form">
+                                        <button type="button" class="btn btn-outline-secondary btn-sm delete-btn">
+                                            <i class="fa fa-trash-alt"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </div><!--end col-->
                             <div class="col-lg-5 offset-lg-1 text-center">

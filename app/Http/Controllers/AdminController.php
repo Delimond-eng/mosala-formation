@@ -10,6 +10,7 @@ use App\Models\Souscription;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 
@@ -161,9 +162,17 @@ class AdminController extends Controller
         ]);
     }
     public function viewSubscribePage(){
-        $subscriptions = Souscription::with(["formation", "user"])->get();
+        $subscriptions = Souscription::with("formation")
+        ->with('user')
+        ->get();
         return view("pages.auth.students", [
             "subscriptions"=>$subscriptions
+        ]);
+    }
+    public function viewDomainePage(){
+        $domaines = Domaine::with(["user"])->get();
+        return view("pages.auth.config_domaines", [
+            "domaines"=>$domaines
         ]);
     }
 
@@ -179,8 +188,8 @@ class AdminController extends Controller
             'description' => 'nullable|string',
         ]);
         $data["user_id"] = Auth::id();
-        $domaine = Domaine::create($data);
-        return response()->json(['message' => 'Domaine créé avec succès', 'data' => $domaine], 201);
+        $domaine = Domaine::updateOrCreate(["id"=>$request->domaine_id ?? ''], $data);
+        return redirect()->back()->with('success', 'Domaine créé avec succès.');
     }
 
 
@@ -202,5 +211,13 @@ class AdminController extends Controller
         $monthlySouscriptions = array_values($monthlySouscriptions);
 
         return response()->json($monthlySouscriptions);
+    }
+
+    public function triggerDelete(string $table, $val){
+        $field = 'id';
+        $result = DB::table($table)
+            ->where($field, $val)
+            ->delete();
+        return redirect()->back()->with('success', 'Suppression effectuée avec succès.');
     }
 }

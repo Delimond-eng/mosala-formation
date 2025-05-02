@@ -14,9 +14,14 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $sliders = Slider::with(["formation.domaine", "formation.formateur"])->get();
+        $sliders = Slider::with(["formation.domaine", "formation.formateur"])->orderByDesc("id")->get();
         $formations = Formation::with(["domaine", "formateur"])->orderByDesc("id")->paginate(6);
         return view('home', ["formations"=>$formations, "sliders"=>$sliders]);
+    }
+
+    public function about(){
+        $formations = Formation::with(["domaine", "formateur"])->orderByDesc("id")->paginate(6);
+        return view('pages.about', ["formations"=>$formations]);
     }
 
     public function moreCourses(Request $request)

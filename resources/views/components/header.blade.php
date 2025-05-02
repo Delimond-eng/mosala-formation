@@ -56,6 +56,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="/">Accueil</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url("/about") }}">A propos</a>
+                        </li>
 
                         <li class="nav-item mega-menu dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Formations</a>
@@ -91,12 +94,10 @@
                             </div>
                         </li>
 
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="#">Livres</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Evénements</a>
-                        </li>
+                        </li> -->
+                        
                         <li class="nav-item"><a class="nav-link" href="{{url("/contact-us")}}">Contact</a></li>
                     </ul>
                     <div class="nav-right">

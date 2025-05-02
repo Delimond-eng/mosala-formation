@@ -52,6 +52,31 @@
         <script src="{{ asset('admin/js/app.js') }}"></script>
         <script src="{{ asset("admin/libs/sweetalert2/sweetalert2.min.js") }}"></script>
         @stack("scripts")
+        <script>
+            document.addEventListener("DOMContentLoaded", function(e){
+                const deleteButtons = document.querySelectorAll('.delete-btn');
+                deleteButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        const form = this.closest('form');
+
+                        Swal.fire({
+                            title: 'Êtes-vous sûr ?',
+                            text: "Cette action est irréversible !",
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonColor: '#d33',
+                            cancelButtonColor: '#3085d6',
+                            confirmButtonText: 'Oui, supprimer',
+                            cancelButtonText: 'Annuler'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                form.submit();
+                            }
+                        });
+                    });
+                });
+            });
+        </script>
     </body>
     <!--end body-->
 </html>

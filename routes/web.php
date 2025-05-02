@@ -12,6 +12,7 @@ Route::get('/course-details', [HomeController::class, 'courseDetails'])->name('c
 Route::post("/souscrire", [HomeController::class, "souscrire"])->name("souscrire");
 
 Route::view('/faqs', 'pages.faq');
+Route::get('/about', [HomeController::class, 'about'])->name("page.about");
 Route::view('/contact-us', 'pages.contact');
 
 Auth::routes();
@@ -21,6 +22,7 @@ Route::prefix("/adm")->middleware(["auth"])->group(function(){
     Route::get('/formateurs', [AdminController::class, "viewFormateurPage"])->name('admin.formateurs'); 
     Route::get('/students', [AdminController::class, "viewSubscribePage"])->name('admin.students'); 
     Route::get('/sliders',[AdminController::class, 'viewSliderPage'] )->name('admin.sliders'); 
+    Route::get('/config.domaines',[AdminController::class, 'viewDomainePage'] )->name('admin.config.domaines'); 
     Route::post('/formateur.create', [App\Http\Controllers\AdminController::class, 'createTeacher'])->name('admin.formateur.create'); 
     Route::post('/formation.create', [App\Http\Controllers\AdminController::class, 'createFormation'])->name('admin.formation.create'); 
     Route::post('/slider.create', [App\Http\Controllers\AdminController::class, 'createSlider'])->name('admin.slider.create'); 
@@ -28,4 +30,5 @@ Route::prefix("/adm")->middleware(["auth"])->group(function(){
     Route::get('/souscriptions-stats', [AdminController::class, 'getSouscriptionsStats'])->name('admin.souscriptions.stats'); 
     Route::get("/users", [UserController::class, "showAllUsers"])->name("admin.users");
     Route::post("/user.create", [UserController::class, "createUser"])->name("admin.user.create");
+    Route::get('/delete/{table}/{val}', [AdminController::class, 'triggerDelete'])->name("delete");
 });

@@ -47,7 +47,11 @@
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Basic example">
                                                 <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-pencil-alt"></i></button>
-                                                <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-trash-alt"></i></button>
+                                                <form action="{{ route('delete', ['table' => 'formateurs', 'val' => $f->id]) }}" method="GET" style="display: inline;" class="delete-form">
+                                                    <button type="button" class="btn btn-outline-secondary btn-sm delete-btn">
+                                                        <i class="fa fa-trash-alt"></i>
+                                                    </button>
+                                                </form>
                                             </div>
                                         </td>
                                     </tr>

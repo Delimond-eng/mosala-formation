@@ -1,5 +1,5 @@
 @php
-    $formationsArrFooter = config('formations')
+    $formationsArrFooter = App\Models\Formation::paginate(6)
 @endphp
 
 <footer class="footer-area">
@@ -48,7 +48,7 @@
                         <ul class="footer-list">
 
                             @foreach($formationsArrFooter as $f)
-                                <li><a href="/course-details?slot={{$f['slot']}}"><i class="fas fa-caret-right"></i>{{$f["title"]}}</a></li>
+                                <li><a href="/course-details?slot={{$f['slug']}}"><i class="fas fa-caret-right"></i>{{$f["title"]}}</a></li>
                             @endforeach
                         </ul>
                     </div>

@@ -115,5 +115,4 @@
         <!-- faq area end -->
 
     </main>
-
 @endsection

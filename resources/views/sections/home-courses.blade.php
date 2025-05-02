@@ -1,4 +1,4 @@
-<div class="course-area py-120">
+<div class="course-area py-120" style="color: #ffffff;">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 mx-auto">

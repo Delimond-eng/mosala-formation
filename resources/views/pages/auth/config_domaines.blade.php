@@ -11,7 +11,7 @@
                     <div class="card-header">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h4 class="card-title">Liste des utilisateurs</h4>
+                                <h4 class="card-title">Liste des domaines</h4>
                             </div><!--end col-->
                         </div> <!--end row-->
                     </div><!--end card-header-->
@@ -20,24 +20,21 @@
                             <table class="table table-hover mb-0">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th>Nom d'utilisateur</th>
-                                        <th>Email</th>
-                                        <th>Rôle</th>
+                                        <th>Libellé</th>
+                                        <th>Description</th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($users as $user)
+                                    @foreach ($domaines as $d)
                                     <tr>
                                         <td>
-                                            <img src="{{ asset("assets/img/avatar.png") }}" alt="" class="thumb-sm rounded me-2 d-inline-block">
-                                            {{ $user->name }}
+                                            {{ $d->libelle }}
                                         </td>
-                                        <td>{{ $user->email }}</td>
-                                        <td>{{ $user->role }}</td>
+                                        <td>{{ $d->description }}</td>
                                         <td>
                                             <button id="btn-edit" class="btn btn-outline-info btn-sm me-1 shadow-none rounded-pill me-1"><i class="fa fa-pencil-alt"></i></button>
-                                            <form action="{{ route('delete', ['table' => 'users', 'val' => $user->id]) }}" method="GET" style="display: inline;" class="delete-form">
+                                            <form action="{{ route('delete', ['table' => 'domaines', 'val' => $d->id]) }}" method="GET" style="display: inline;" class="delete-form">
                                                 <button type="button" class="btn btn-outline-danger btn-sm me-1 shadow-none rounded-pill delete-btn">
                                                     <i class="fa fa-trash-alt"></i>
                                                 </button>
@@ -85,26 +82,16 @@
                             </div>
                         </div>
                         @endif
-                        <form class="form" method="post" action="{{ route("admin.user.create") }}">
+                        <form class="form" method="post" action="{{ route("admin.domaine.create") }}">
                             @csrf
-                            <input type="text" name="user_id" hidden>
+                            <input type="text" name="domaine_id" hidden>
                             <div class="mb-2">
-                                <label for="username" class="form-label">Nom d'utilisateur</label>
-                                <input class="form-control border-dark" type="text" name="name" placeholder="Ex: Bill Joe">
+                                <label for="username" class="form-label">Libellé</label>
+                                <input class="form-control border-dark" type="text" name="libelle" placeholder="Ex: Informatique">
                             </div>
                             <div class="mb-2">
-                                <label for="username" class="form-label">Adresse Email</label>
-                                <input class="form-control border-dark" type="text" name="email" placeholder="ex: billjoe@domain">
-                            </div>
-                            <div class="mb-2">
-                                <label for="username" class="form-label">Mot de passe</label>
-                                <input class="form-control border-dark" type="password" name="password" placeholder="***************">
-                            </div>
-                            <div class="mb-2">
-                                <label for="email" class="form-label">Role</label>
-                                <select name="role" class="form-select border-dark">
-                                    <option value="ADMIN">Administrateur</option>
-                                </select>
+                                <label for="email" class="form-label">Description</label>
+                                <textarea name="description" class="form-control" placeholder="Entrer une description"></textarea>
                             </div>
                             <button type="submit" id="btn-submit" class="btn btn-primary">Créer</button>
                             <button type="button" class="btn btn-dark" id="btn-cancel">Annuler</button>
@@ -133,24 +120,21 @@
 
         function resetForm() {
             form.reset(); // réinitialise tous les champs
-            form.querySelector('input[name="user_id"]').value = ''; // vide le champ caché user_id
+            form.querySelector('input[name="domaine_id"]').value = ''; // vide le champ caché user_id
             btnSubmit.textContent = 'Créer';
         }
 
         editButtons.forEach((button, index) => {
             button.addEventListener('click', function() {
                 const row = this.closest('tr');
-                const name = row.querySelector('td:nth-child(1)').innerText.trim();
-                const email = row.querySelector('td:nth-child(2)').innerText.trim();
-                const role = row.querySelector('td:nth-child(3)').innerText.trim();
-                let users = <?= json_encode($users) ?>;
-                const userId = users[index].id;
+                const libelle = row.querySelector('td:nth-child(1)').innerText.trim();
+                const description = row.querySelector('td:nth-child(2)').innerText.trim();
+                let domaines = <?= json_encode($domaines) ?>;
+                const domaineId = domaines[index].id;
 
-                form.querySelector('input[name="name"]').value = name;
-                form.querySelector('input[name="email"]').value = email;
-                form.querySelector('input[name="password"]').value = '';
-                form.querySelector('select[name="role"]').value = role;
-                form.querySelector('input[name="user_id"]').value = userId;
+                form.querySelector('input[name="libelle"]').value = libelle;
+            form.querySelector('textarea[name="description"]').value = description ?? '';
+                form.querySelector('input[name="domaine_id"]').value = domaineId
                 btnSubmit.textContent = 'Mettre à jour';
             });
         });

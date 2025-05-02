@@ -12,6 +12,7 @@ class Domaine extends Model
     protected $fillable = [
         'libelle',
         'description',
+        'user_id'
     ];
 
     /**

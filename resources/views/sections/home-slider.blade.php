@@ -7,7 +7,7 @@
                     <div class="col-md-12 col-lg-10">
                         <div class="hero-content">
                             <h6 class="hero-sub-title" data-animation="fadeInDown" data-delay=".25s">
-                                <i class="far fa-graduation-cap"></i>Bievenue sur mosala!
+                                Bievenue sur mosala!
                             </h6>
                             <h1 class="hero-title" data-animation="fadeInRight" data-delay=".50s">
                                 {{ $slider->title }} <!-- <span>la TVA.</span> -->

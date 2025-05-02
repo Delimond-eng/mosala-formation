@@ -26,7 +26,7 @@
             <div class="col-lg-6">
                 <div class="about-right wow fadeInRight" data-wow-delay=".25s">
                     <div class="site-heading mb-3">
-                        <span class="site-title-tagline"><i class="far fa-graduation-cap"></i> A propos</span>
+                        <span class="site-title-tagline"> A propos</span>
                         <h2 class="site-title">
                             Notre <span>Plateforme</span> d'apprentissage est conçue pour vous
                             <span>Inspirer</span> encore

@@ -96,10 +96,12 @@
                                         <td class="text-truncate">{{ substr($sub->formation->title,0, 20) }}...</td>
                                         <td>{{ $sub->paiement }}$</td>
                                         <td class="text-end">
-                                            <div class="btn-group" role="group" aria-label="Basic example">
-                                                <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-pencil-alt"></i></button>
-                                                <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-trash-alt"></i></button>
-                                            </div>
+                                        <button type="button" class="btn btn-outline-secondary btn-sm me-1"><i class="fa fa-pencil-alt"></i></button>
+                                        <form action="{{ route('delete', ['table' => 'souscriptions', 'val' => $sub->id]) }}" method="GET" style="display: inline;" class="delete-form">
+                                            <button type="button" class="btn btn-outline-secondary btn-sm delete-btn">
+                                                <i class="fa fa-trash-alt"></i>
+                                            </button>
+                                        </form>
                                         </td>
                                     </tr>
                                     @endforeach

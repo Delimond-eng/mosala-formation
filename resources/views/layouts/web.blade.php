@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    @stack("styles")
 
 </head>
 
@@ -82,6 +83,7 @@
 <script src="{{ asset('assets/js/counter-up.js') }}"></script>
 <script src="{{ asset('assets/js/wow.min.js') }}"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
+@stack("scripts")
 
 </body>
 

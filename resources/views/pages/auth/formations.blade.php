@@ -35,10 +35,12 @@
                                         </div><!--end media-body-->
                                     </div>
                                     <div class="align-self-center">
-                                        <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-pencil-alt"></i></button>
-                                            <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-trash-alt"></i></button>
-                                        </div>
+                                        <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-pencil-alt"></i></button>
+                                        <form action="{{ route('delete', ['table' => 'formations', 'val' => $fo->id]) }}" method="GET" style="display: inline;" class="delete-form">
+                                            <button type="button" class="btn btn-outline-danger btn-sm delete-btn">
+                                                <i class="fa fa-trash-alt"></i>
+                                            </button>
+                                        </form>
                                     </div>
                                 </div>
                             </div><!--end blog-card-->
@@ -210,6 +212,7 @@
                     alert("Le fichier sélectionné n'est pas une image valide.");
                 }
             });
+        
         });
     </script>
 @endpush

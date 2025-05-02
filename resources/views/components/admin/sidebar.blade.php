@@ -5,9 +5,8 @@
             <span>
                 <img src="{{ asset('admin/images/logo-sm.png') }}" alt="logo-small" class="logo-sm">
             </span>
-            <span class="">
-                <img src="{{ asset('admin/images/logo-light.png') }}" alt="logo-large" class="logo-lg logo-light">
-                <img src="{{ asset('admin/images/logo-dark.png') }}" alt="logo-large" class="logo-lg logo-dark">
+            <span class="logo-lg logo-light">
+                <h1 class="text-center">Mosala</h1>
             </span>
         </a>
     </div>
@@ -58,11 +57,26 @@
                             <span>Liste des inscrits</span><span class="badge rounded text-success bg-success-subtle ms-1">New</span>
                         </a>
                     </li><!--end nav-item-->
+                    
                     <li class="nav-item">
                         <a class="nav-link {{ Route::is("admin.users") ? 'active' : '' }}" href="{{ route("admin.users") }}">
                             <i class="iconoir-home-user menu-icon"></i>
                             <span>Gestion des utilisateurs</span>
                         </a>
+                    </li><!--end nav-item-->
+                    <li class="nav-item">
+                        <a class="nav-link {{ Route::is("admin.config.domaines") ? 'active' : '' }}" href="#sidebarDomaines" data-bs-toggle="collapse" role="button"
+                            aria-expanded="false" aria-controls="sidebarDomaines">
+                            <i class="iconoir-ios-settings menu-icon"></i>
+                            <span>Configurations</span>
+                        </a>
+                        <div class="collapse " id="sidebarDomaines">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route("admin.config.domaines") }}">Domaines</a>
+                                </li><!--end nav-item-->
+                            </ul><!--end nav-->
+                        </div><!--end startbarDashboards-->
                     </li><!--end nav-item-->
                 </ul><!--end navbar-nav--->
                 <div class="update-msg text-center">
